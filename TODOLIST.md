@@ -1,5 +1,5 @@
 # TODOLIST
 
-* be able to run command locally
-* be able to generate a project structure
-* be able to take in parameters 
+* [x] be able to run command locally - 7min
+* [ ] be able to generate a project structure - 25min
+* [ ] be able to take in parameters - 10min

@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "A command utility to different kinds of projects with different tech stacks.",
   "main": "src/cli.js",
+  "bin": {
+    "pi": "./bin/cli.js"
+  },
   "scripts": {
     "lint": "eslint src",
     "test": "jest",
