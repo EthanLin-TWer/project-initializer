@@ -1,5 +1,5 @@
 {
-  "name": "project-skeleton-creator",
+  "name": "project-initializer",
   "version": "1.0.0",
   "description": "A command utility to different kinds of projects with different tech stacks.",
   "main": "index.js",
