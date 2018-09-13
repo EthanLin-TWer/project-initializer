@@ -1,0 +1,17 @@
+{
+  "name": "frontend-skeleton",
+  "version": "1.0.0",
+  "description": "A command utility to create a skeleton for a normal frontend project with with different tech stacks.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "skeleton",
+    "frontend",
+    "utility",
+    "command-line"
+  ],
+  "author": "Linesh",
+  "license": "MIT"
+}
