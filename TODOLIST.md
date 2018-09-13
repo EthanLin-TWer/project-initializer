@@ -1,10 +1,14 @@
 # TODOLIST
 
 * [x] be able to run command locally - 7min
-* [ ] be able to generate a project structure - 25min :18min
+* [ ] be able to generate a project structure - 25min
   * [x] init with 'git init'
   * [x] init with 'npm init' with default parameters
-  * [x] install dependencies
+  * [x] install dependencies :18min
+  * [x] init `package.json` fields :7min
+  * [ ] copy skeletons
+    * [ ] `.eslintrc`
+    * [ ] `.travis.yml`
 * [ ] be able to take in parameters - 10min
   * [ ] create a new project folder with provided name
   * [ ] run 'git init' under created project root

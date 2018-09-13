@@ -20,6 +20,9 @@
   ],
   "author": "Linesh",
   "license": "MIT",
+  "dependencies": {
+    "edit-json-file": "^1.1.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.0.1",
     "@babel/preset-env": "^7.0.0",
