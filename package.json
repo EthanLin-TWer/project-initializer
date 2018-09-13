@@ -1,10 +1,13 @@
 {
-  "name": "frontend-skeleton",
+  "name": "project-skeleton-creator",
   "version": "1.0.0",
-  "description": "A command utility to create a skeleton for a normal frontend project with with different tech stacks.",
+  "description": "A command utility to different kinds of projects with different tech stacks.",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "lint": "eslint src",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:ci": "jest --coverage --verbose"
   },
   "keywords": [
     "skeleton",
@@ -13,5 +16,51 @@
     "command-line"
   ],
   "author": "Linesh",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.0.1",
+    "@babel/preset-env": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^9.0.0",
+    "eslint": "^5.5.0",
+    "eslint-config-prettier": "^3.0.1",
+    "eslint-plugin-prettier": "^2.6.2",
+    "husky": "^0.14.3",
+    "jest": "^23.6.0",
+    "lint-staged": "^7.2.2",
+    "prettier": "^1.14.2"
+  },
+  "jest": {
+    "testMatch": [
+      "<rootDir>/src/*.test.js"
+    ],
+    "verbose": false,
+    "collectCoverage": false
+  },
+  "prettier": {
+    "printWidth": 80,
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "arrowParens": "always"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "linters": {
+      "src/**/*.js": [
+        "npm run lint -- --fix",
+        "git add"
+      ]
+    }
+  }
 }
