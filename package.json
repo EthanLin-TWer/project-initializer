@@ -2,7 +2,7 @@
   "name": "project-initializer",
   "version": "1.0.0",
   "description": "A command utility to different kinds of projects with different tech stacks.",
-  "main": "index.js",
+  "main": "src/cli.js",
   "scripts": {
     "lint": "eslint src",
     "test": "jest",
