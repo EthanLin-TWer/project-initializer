@@ -23,7 +23,8 @@
 * [x] published to npm and get it to work - 15min
   * [x] requires in `bin`
   * [x] update version and publish script :12min
-  * [ ] + template files not copied over :12min
+  * [x] + template files not copied over :30min - use "files" approach
+  * [ ] + `${__dirname}/../templates` wont' work on npm publish
 * [ ] refactor
   * [ ] some npm init argument no longer makes sense
   * [ ] optimize, `find` will report an error when directory not found
