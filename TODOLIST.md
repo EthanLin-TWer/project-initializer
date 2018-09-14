@@ -24,7 +24,8 @@
   * [x] requires in `bin`
   * [x] update version and publish script :12min
   * [x] + template files not copied over :30min - use "files" approach
-  * [ ] + `${__dirname}/../templates` wont' work on npm publish
+  * [x] + `${__dirname}/../templates/` wont' work on npm publish - not the case :25min
+  * [ ] + `.gitignore` will got renamed to `.npmignore`
 * [ ] refactor
   * [ ] some npm init argument no longer makes sense
   * [ ] optimize, `find` will report an error when directory not found

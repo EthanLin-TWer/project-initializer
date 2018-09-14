@@ -40,7 +40,9 @@ const templateDirectory = `${__dirname}/../templates/bare-frontend`
 if (shell.which('git')) {
   log(info('Initializing git repo ...'))
   shell.exec('git init')
-  shell.cp(`${templateDirectory}/.gitignore`, '.')
+  // .gitignore will got renamed to .npmignore by 'npm pack'
+  // see the issue here: https://github.com/npm/npm/issues/7252
+  shell.exec(`echo node_modules > ${templateDirectory}/.gitignore`)
 }
 
 log(info('Initializing npm, creating package.json ...'))
