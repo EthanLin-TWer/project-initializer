@@ -1,6 +1,6 @@
 {
   "name": "project-initializer",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A command utility to different kinds of projects with different tech stacks.",
   "main": "src/cli.js",
   "bin": {
