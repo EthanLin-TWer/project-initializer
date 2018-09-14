@@ -62,7 +62,7 @@ log(
       'eslint',
       'eslint-config-prettier',
       'eslint-plugin-prettier',
-      'husky',
+      'husky@next',
       'jest',
       'lint-staged',
       'prettier',
