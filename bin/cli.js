@@ -2,39 +2,70 @@
 
 const child_process = require('child_process')
 const shell = require('shelljs')
+const chalk = require('chalk')
 const jsonEditor = require('edit-json-file')
+
+const log = console.log
+const error = chalk.red
+const info = chalk.green
 
 const [nodePath, commandName, ...args] = process.argv
 const [projectName] = args
 
 if (!projectName) {
-  shell.echo('You should at least provide a project name')
+  log(error('You should at least provide a project name'))
+  log(error('e.g.: pi my-awesome-project'))
   shell.exit(1)
 }
 
 if (shell.find(projectName).code === 0) {
-  shell.echo(
-    `Directory ${projectName} already exist in current path, please choose another name.`
+  log(
+    error(
+      `Directory ${projectName} already exist in current path, please choose another name.`
+    )
   )
   shell.exit(1)
 }
 
 if (!shell.which('npm')) {
-  shell.echo('You should have npm installed globally. Installation aborted.')
+  log(error('You should have npm installed globally. Installation aborted.'))
   shell.exit(1)
 }
 
+log(info(`Creating directory ${projectName} ...`))
 shell.mkdir('-p', projectName)
 shell.cd(projectName)
 
 if (shell.which('git')) {
+  log(info('Initializing git repo ...'))
   shell.exec('git init')
   shell.cp(`${__dirname}/templates/bare-frontend/.gitignore`, '.')
 }
 
+log(info('Initializing npm, creating package.json ...'))
 child_process.execFileSync('npm', ['init'], {
   stdio: 'inherit',
 })
+
+log(
+  info(
+    'Installing npm dependencies: ',
+    [
+      '@babel/core',
+      '@babel/preset-env',
+      'babel-core@^7.0.0-bridge.0',
+      'babel-eslint',
+      'eslint',
+      'eslint-config-prettier',
+      'eslint-plugin-prettier',
+      'husky',
+      'jest',
+      'lint-staged',
+      'prettier',
+    ],
+    ' ...'
+  )
+)
 child_process.execFileSync(
   'npm',
   [
@@ -57,10 +88,12 @@ child_process.execFileSync(
   }
 )
 
+log(info('Setting up .eslintrc, .travis.yml, src/ ...'))
 shell.cp(`${__dirname}/templates/bare-frontend/.eslintrc`, '.')
 shell.cp(`${__dirname}/templates/bare-frontend/.travis.yml`, '.')
 shell.cp('-Rn', `${__dirname}/templates/bare-frontend/src/`, '.')
 
+log(info('Updating npm scripts ...'))
 let packageJson = jsonEditor('./package.json')
 packageJson.set('scripts', {
   lint: 'eslint src',
@@ -97,6 +130,14 @@ packageJson.set('lint-staged', {
 packageJson.save()
 
 if (shell.which('git')) {
+  log(info('First commit ...'))
   shell.exec('git add .')
   shell.exec('git commit -m "💥initial commit"')
 }
+
+log(
+  info(
+    '💥💥💥You are all done. Happy hacking around with your new project!💥💥💥'
+  )
+)
+log(info(`You can now run 'cd ${projectName}'.`))

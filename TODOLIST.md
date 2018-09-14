@@ -19,7 +19,7 @@
   * [x] do not call 'git init' and touch `.gitignore` when git command is not present
   * [x] abort if user does not have npm installed
   * [x] auto commit as the first commit 
-* [ ] better logging :15min 
+* [x] better logging - 15min :15min 
 * [ ] refactor
   * [ ] some npm init argument no longer makes sense
   * [ ] optimize, `find` will report an error when directory not found
@@ -27,6 +27,7 @@
   * [ ] compiled to /bin automatically when in dev mode
   * [ ] extract dependencies and version mapping for different project kinds as constants 
   * [ ] maintain a list of file templates
+  * [ ] print out installing dependencies in log 
   * [x] `npm install` should have logs printed out
 
 ## Future requirements
