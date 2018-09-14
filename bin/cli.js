@@ -4,7 +4,7 @@ const shell = require('shelljs')
 const jsonEditor = require('edit-json-file')
 
 shell.exec('git init')
-shell.exec('npm init --force')
+shell.exec('npm init')
 shell.exec(
   'npm i -D @babel/core @babel/preset-env babel-core@^7.0.0-bridge.0 babel-eslint eslint eslint-config-prettier eslint-plugin-prettier husky jest lint-staged prettier'
 )

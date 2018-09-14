@@ -14,7 +14,7 @@
 * [ ] be able to take in parameters - 10min
   * [ ] create a new project folder with provided name
   * [ ] run 'git init' under created project root
-  * [ ] make npm init customizable
+  * [ ] make npm init customizable - not necessary, prompt user with `npm init` origin inputs
   * [ ] do not call 'git init' and touch `.gitignore` when git command is not present
   * [ ] abort if user does not have npm installed
   * [ ] when provided with different project kinds arguments, generate skeletons based on different templates
