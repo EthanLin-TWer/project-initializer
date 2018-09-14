@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+const child_process = require('child_process')
 const shell = require('shelljs')
 const jsonEditor = require('edit-json-file')
 
@@ -25,10 +26,31 @@ if (shell.which('git')) {
   shell.exec('git init')
 }
 
-shell.exec('npm init')
-// shell.exec(
-//   'npm i -D @babel/core @babel/preset-env babel-core@^7.0.0-bridge.0 babel-eslint eslint eslint-config-prettier eslint-plugin-prettier husky jest lint-staged prettier'
-// )
+child_process.execFileSync('npm', ['init'], {
+  stdio: 'inherit',
+})
+child_process.execFileSync(
+  'npm',
+  [
+    'install',
+    '-D',
+    '@babel/core',
+    '@babel/preset-env',
+    'babel-core@^7.0.0-bridge.0',
+    'babel-eslint',
+    'eslint',
+    'eslint-config-prettier',
+    'eslint-plugin-prettier',
+    'husky',
+    'jest',
+    'lint-staged',
+    'prettier',
+  ],
+  {
+    stdio: 'inherit',
+  }
+)
+
 shell.cp(`${__dirname}/templates/bare-frontend/.eslintrc`, '.')
 shell.cp(`${__dirname}/templates/bare-frontend/.gitignore`, '.')
 shell.cp(`${__dirname}/templates/bare-frontend/.travis.yml`, '.')
