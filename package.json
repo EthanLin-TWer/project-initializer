@@ -9,8 +9,7 @@
   "files": [
     "templates/",
     "bin/",
-    "**/.gitignore",
-    ".npmignore"
+    "**/.gitignore"
   ],
   "scripts": {
     "lint": "eslint src",
