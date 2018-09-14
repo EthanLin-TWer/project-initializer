@@ -11,17 +11,15 @@
     * [x] `.travis.yml`
     * [x] `.gitignore`
     * [x] `src`
-* [ ] be able to take in parameters - 10min
+* [x] be able to take in parameters - 25min
   * [x] do not create folder with the same name
   * [x] create a new project folder with provided name
   * [x] run 'git init' under created project root
   * [x] make npm init customizable - not necessary, prompt user with `npm init` origin inputs :10min
   * [x] do not call 'git init' and touch `.gitignore` when git command is not present
   * [x] abort if user does not have npm installed
-  * [ ] when provided with different project kinds arguments, generate skeletons based on different templates
-  * [ ] auto commit as the first commit 
-* [ ] log support
-  * [ ] better logging
+  * [x] auto commit as the first commit 
+* [ ] better logging :15min 
 * [ ] refactor
   * [ ] some npm init argument no longer makes sense
   * [ ] optimize, `find` will report an error when directory not found
@@ -30,3 +28,10 @@
   * [ ] extract dependencies and version mapping for different project kinds as constants 
   * [ ] maintain a list of file templates
   * [x] `npm install` should have logs printed out
+
+## Future requirements
+
+* [ ] when provided with different project kinds arguments, generate skeletons based on different templates - e.g., react projects 
+* [ ] tests 
+* [ ] better command line
+  * https://github.com/sindresorhus/meow

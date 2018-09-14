@@ -95,3 +95,8 @@ packageJson.set('lint-staged', {
   },
 })
 packageJson.save()
+
+if (shell.which('git')) {
+  shell.exec('git add .')
+  shell.exec('git commit -m "💥initial commit"')
+}
