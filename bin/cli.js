@@ -3,14 +3,29 @@
 const shell = require('shelljs')
 const jsonEditor = require('edit-json-file')
 
+const [nodePath, commandName, ...args] = process.argv
+const [projectName] = args
+
+if (!projectName) {
+  shell.echo('You should at least provide a project name')
+  shell.exit(1)
+}
+
+if (shell.find(projectName).code === 0) {
+  shell.echo(
+    `Directory ${projectName} already exist in current path, please choose another name.`
+  )
+  shell.exit(1)
+}
+
 if (shell.which('git')) {
   shell.exec('git init')
 }
 
 shell.exec('npm init')
-shell.exec(
-  'npm i -D @babel/core @babel/preset-env babel-core@^7.0.0-bridge.0 babel-eslint eslint eslint-config-prettier eslint-plugin-prettier husky jest lint-staged prettier'
-)
+// shell.exec(
+//   'npm i -D @babel/core @babel/preset-env babel-core@^7.0.0-bridge.0 babel-eslint eslint eslint-config-prettier eslint-plugin-prettier husky jest lint-staged prettier'
+// )
 shell.cp(`${__dirname}/templates/bare-frontend/.eslintrc`, '.')
 shell.cp(`${__dirname}/templates/bare-frontend/.gitignore`, '.')
 shell.cp(`${__dirname}/templates/bare-frontend/.travis.yml`, '.')
@@ -50,6 +65,3 @@ packageJson.set('lint-staged', {
   },
 })
 packageJson.save()
-
-const [nodePath, commandName, ...args] = process.argv
-console.log(nodePath, commandName, args)

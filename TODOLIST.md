@@ -12,6 +12,7 @@
     * [x] `.gitignore`
     * [x] `src`
 * [ ] be able to take in parameters - 10min
+  * [x] do not create folder with the same name
   * [ ] create a new project folder with provided name
   * [x] run 'git init' under created project root
   * [x] make npm init customizable - not necessary, prompt user with `npm init` origin inputs
