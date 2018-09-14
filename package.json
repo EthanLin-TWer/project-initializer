@@ -7,7 +7,8 @@
     "pi": "./bin/cli.js"
   },
   "files": [
-    "templates/"
+    "templates/",
+    "bin/"
   ],
   "scripts": {
     "lint": "eslint src",
