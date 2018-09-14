@@ -24,6 +24,7 @@ shell.cd(projectName)
 
 if (shell.which('git')) {
   shell.exec('git init')
+  shell.cp(`${__dirname}/templates/bare-frontend/.gitignore`, '.')
 }
 
 child_process.execFileSync('npm', ['init'], {
@@ -52,7 +53,6 @@ child_process.execFileSync(
 )
 
 shell.cp(`${__dirname}/templates/bare-frontend/.eslintrc`, '.')
-shell.cp(`${__dirname}/templates/bare-frontend/.gitignore`, '.')
 shell.cp(`${__dirname}/templates/bare-frontend/.travis.yml`, '.')
 shell.cp('-Rn', `${__dirname}/templates/bare-frontend/src/`, '.')
 
