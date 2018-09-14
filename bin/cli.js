@@ -36,10 +36,11 @@ log(info(`Creating directory ${projectName} ...`))
 shell.mkdir('-p', projectName)
 shell.cd(projectName)
 
+const templateDirectory = `${__dirname}/../templates/bare-frontend`
 if (shell.which('git')) {
   log(info('Initializing git repo ...'))
   shell.exec('git init')
-  shell.cp(`${__dirname}/../templates/bare-frontend/.gitignore`, '.')
+  shell.cp(`${templateDirectory}/.gitignore`, '.')
 }
 
 log(info('Initializing npm, creating package.json ...'))
@@ -89,9 +90,9 @@ child_process.execFileSync(
 )
 
 log(info('Setting up .eslintrc, .travis.yml, src/ ...'))
-shell.cp(`${__dirname}/../templates/bare-frontend/.eslintrc`, '.')
-shell.cp(`${__dirname}/../templates/bare-frontend/.travis.yml`, '.')
-shell.cp('-Rn', `${__dirname}/../templates/bare-frontend/src/`, '.')
+shell.cp(`${templateDirectory}/.eslintrc`, '.')
+shell.cp(`${templateDirectory}/.travis.yml`, '.')
+shell.cp(`${templateDirectory}/src/`, '.')
 
 log(info('Updating npm scripts ...'))
 let packageJson = jsonEditor('./package.json')
