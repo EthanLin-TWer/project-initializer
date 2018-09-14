@@ -10,7 +10,8 @@
     "lint": "eslint src",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:ci": "jest --coverage --verbose"
+    "test:ci": "jest --coverage --verbose",
+    "publish:patch": "npm version patch && npm publish"
   },
   "keywords": [
     "skeleton",
