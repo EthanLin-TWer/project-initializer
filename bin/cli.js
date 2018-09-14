@@ -9,7 +9,7 @@ const log = console.log
 const error = chalk.red
 const info = chalk.green
 
-const [nodePath, commandName, ...args] = process.argv
+const [, , ...args] = process.argv
 const [projectName] = args
 
 if (!projectName) {
