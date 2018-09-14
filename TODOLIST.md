@@ -17,7 +17,7 @@
   * [x] run 'git init' under created project root
   * [x] make npm init customizable - not necessary, prompt user with `npm init` origin inputs :10min
   * [x] do not call 'git init' and touch `.gitignore` when git command is not present
-  * [ ] abort if user does not have npm installed
+  * [x] abort if user does not have npm installed
   * [ ] when provided with different project kinds arguments, generate skeletons based on different templates
   * [ ] auto commit as the first commit 
 * [ ] log support

@@ -19,6 +19,11 @@ if (shell.find(projectName).code === 0) {
   shell.exit(1)
 }
 
+if (!shell.which('npm')) {
+  shell.echo('You should have npm installed globally. Installation aborted.')
+  shell.exit(1)
+}
+
 shell.mkdir('-p', projectName)
 shell.cd(projectName)
 
