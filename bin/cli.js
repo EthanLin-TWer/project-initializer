@@ -65,8 +65,6 @@ log(
       'husky@next',
       'jest',
       'lint-staged',
-      '@commitlint/cli',
-      '@commitlint/config-conventional',
       'prettier',
     ],
     ' ...'
@@ -87,8 +85,6 @@ child_process.execFileSync(
     'husky',
     'jest',
     'lint-staged',
-    '@commitlint/cli',
-    '@commitlint/config-conventional',
     'prettier',
   ],
   {
@@ -133,28 +129,6 @@ packageJson.set('husky', {
 packageJson.set('lint-staged', {
   linters: {
     'src/**/*.js': ['npm run lint -- --fix', 'git add'],
-  },
-})
-packageJson.set('commitlint', {
-  extends: ['@commitlint/config-conventional'],
-  rules: {
-    'type-empty': [2, 'never'],
-    'type-enum': [
-      2,
-      'always',
-      [
-        '🔧chore',
-        '✨feature',
-        '♻️refactor',
-        '🐛fix',
-        '🐛debug',
-        '✅test',
-        '📚docs',
-        '📝todo',
-        '🎨style',
-      ],
-    ],
-    'header-max-length': [2, 'always', 70],
   },
 })
 packageJson.save()
