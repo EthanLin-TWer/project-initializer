@@ -95,7 +95,7 @@ child_process.execFileSync(
 log(info('Setting up .eslintrc, .travis.yml, src/ ...'))
 shell.cp(`${templateDirectory}/.eslintrc`, '.')
 shell.cp(`${templateDirectory}/.travis.yml`, '.')
-shell.cp(`${templateDirectory}/src/`, '.')
+shell.cp('-Rn', `${templateDirectory}/src/`, '.')
 
 log(info('Updating npm scripts ...'))
 let packageJson = jsonEditor('./package.json')
