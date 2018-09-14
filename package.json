@@ -6,6 +6,9 @@
   "bin": {
     "pi": "./bin/cli.js"
   },
+  "files": [
+    "templates/"
+  ],
   "scripts": {
     "lint": "eslint src",
     "test": "jest",
