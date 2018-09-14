@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+const path = require('path')
 const child_process = require('child_process')
 const shell = require('shelljs')
 const chalk = require('chalk')
@@ -36,13 +37,13 @@ log(info(`Creating directory ${projectName} ...`))
 shell.mkdir('-p', projectName)
 shell.cd(projectName)
 
-const templateDirectory = `${__dirname}/../templates/bare-frontend`
+const templateDirectory = path.join(__dirname, '..', 'templates/bare-frontend')
 if (shell.which('git')) {
   log(info('Initializing git repo ...'))
   shell.exec('git init')
   // .gitignore will got renamed to .npmignore by 'npm pack'
   // see the issue here: https://github.com/npm/npm/issues/7252
-  shell.exec(`echo node_modules > ${templateDirectory}/.gitignore`)
+  shell.exec(`echo node_modules >> .gitignore`)
 }
 
 log(info('Initializing npm, creating package.json ...'))
