@@ -18,6 +18,9 @@ if (shell.find(projectName).code === 0) {
   shell.exit(1)
 }
 
+shell.mkdir('-p', projectName)
+shell.cd(projectName)
+
 if (shell.which('git')) {
   shell.exec('git init')
 }
