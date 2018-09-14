@@ -22,7 +22,8 @@
 * [x] better logging - 15min :15min
 * [x] published to npm and get it to work - 15min
   * [x] requires in `bin`
-  * [x] update version and publish script  
+  * [x] update version and publish script :12min
+  * [ ] + template files not copied over :12min
 * [ ] refactor
   * [ ] some npm init argument no longer makes sense
   * [ ] optimize, `find` will report an error when directory not found
