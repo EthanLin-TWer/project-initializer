@@ -35,10 +35,10 @@
   * [ ] print out installing dependencies in log 
   * [ ] + `.gitignore` will got renamed to `.npmignore`
   * [x] `npm install` should have logs printed out
+  * [ ] tests 
+  * [ ] better command line
+    * https://github.com/sindresorhus/meow
 
 ## Future requirements
 
 * [ ] when provided with different project kinds arguments, generate skeletons based on different templates - e.g., react projects 
-* [ ] tests 
-* [ ] better command line
-  * https://github.com/sindresorhus/meow
