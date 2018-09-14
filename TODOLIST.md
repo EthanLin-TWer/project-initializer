@@ -19,7 +19,9 @@
   * [x] do not call 'git init' and touch `.gitignore` when git command is not present
   * [x] abort if user does not have npm installed
   * [x] auto commit as the first commit 
-* [x] better logging - 15min :15min 
+* [x] better logging - 15min :15min
+* [ ] published to npm - 15min
+  * [x] requires in `bin` 
 * [ ] refactor
   * [ ] some npm init argument no longer makes sense
   * [ ] optimize, `find` will report an error when directory not found
