@@ -20,12 +20,11 @@
   * [x] abort if user does not have npm installed
   * [x] auto commit as the first commit 
 * [x] better logging - 15min :15min
-* [x] published to npm and get it to work - 15min
+* [x] published to npm and get it to work - 15min :1h 7min
   * [x] requires in `bin`
   * [x] update version and publish script :12min
   * [x] + template files not copied over :30min - use "files" approach
   * [x] + `${__dirname}/../templates/` wont' work on npm publish - not the case :25min
-  * [ ] + `.gitignore` will got renamed to `.npmignore`
 * [ ] refactor
   * [ ] some npm init argument no longer makes sense
   * [ ] optimize, `find` will report an error when directory not found
@@ -34,6 +33,7 @@
   * [ ] extract dependencies and version mapping for different project kinds as constants 
   * [ ] maintain a list of file templates
   * [ ] print out installing dependencies in log 
+  * [ ] + `.gitignore` will got renamed to `.npmignore`
   * [x] `npm install` should have logs printed out
 
 ## Future requirements
