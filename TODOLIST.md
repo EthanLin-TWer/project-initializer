@@ -20,8 +20,9 @@
   * [x] abort if user does not have npm installed
   * [x] auto commit as the first commit 
 * [x] better logging - 15min :15min
-* [ ] published to npm - 15min
-  * [x] requires in `bin` 
+* [x] published to npm and get it to work - 15min
+  * [x] requires in `bin`
+  * [x] update version and publish script  
 * [ ] refactor
   * [ ] some npm init argument no longer makes sense
   * [ ] optimize, `find` will report an error when directory not found
