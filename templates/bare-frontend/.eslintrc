@@ -1,9 +1,8 @@
 {
   "parser": "babel-eslint",
   "plugins": ["prettier"],
-  "extends": ["prettier", "eslint:recommended"],
+  "extends": ["prettier", "javascript-the-good-parts"],
   "env": {
-    "jest": true,
     "node": true,
     "es6": true
   },
@@ -11,9 +10,6 @@
     "__DEV__": true
   },
   "rules": {
-    "prettier/prettier": "error",
-    "lines-between-class-members": "error",
-    "no-empty": ["error", { "allowEmptyCatch": true }],
-    "no-useless-escape": "off"
+    "prettier/prettier": "error"
   }
 }

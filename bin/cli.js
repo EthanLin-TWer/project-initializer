@@ -80,6 +80,7 @@ child_process.execFileSync(
     'babel-core@^7.0.0-bridge.0',
     'babel-eslint',
     'eslint',
+    'eslint-config-javascript-the-good-parts',
     'eslint-config-prettier',
     'eslint-plugin-prettier',
     'husky',
