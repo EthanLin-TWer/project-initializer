@@ -1,7 +1,7 @@
 {
   "parser": "babel-eslint",
   "plugins": ["prettier"],
-  "extends": ["prettier", "eslint:recommended"],
+  "extends": ["prettier", "javascript-the-good-parts"],
   "env": {
     "jest": true,
     "node": true,
