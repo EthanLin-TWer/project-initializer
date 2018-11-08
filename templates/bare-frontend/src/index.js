@@ -1,3 +1,1 @@
-export const babelWorksWithExports = () => {
-  return true
-}
+export const babelWorksWithExports = () => true
