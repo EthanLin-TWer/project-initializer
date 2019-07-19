@@ -1,30 +1,30 @@
 # TODOLIST
 
-* [x] be able to run command locally - 7min
-* [x] be able to generate a project structure - 25min
+* [x] be able to run command locally
+* [x] be able to generate a project structure
   * [x] init with 'git init'
   * [x] init with 'npm init' with default parameters
-  * [x] install dependencies :18min
-  * [x] init `package.json` fields :7min
-  * [x] copy skeletons :12min
+  * [x] install dependencies
+  * [x] init `package.json` fields
+  * [x] copy skeletons
     * [x] `.eslintrc` 
     * [x] `.travis.yml`
     * [x] `.gitignore`
     * [x] `src`
-* [x] be able to take in parameters - 25min
+* [x] be able to take in parameters
   * [x] do not create folder with the same name
   * [x] create a new project folder with provided name
   * [x] run 'git init' under created project root
-  * [x] make npm init customizable - not necessary, prompt user with `npm init` origin inputs :10min
+  * [x] make npm init customizable - not necessary, prompt user with `npm init` origin inputs
   * [x] do not call 'git init' and touch `.gitignore` when git command is not present
   * [x] abort if user does not have npm installed
   * [x] auto commit as the first commit 
-* [x] better logging - 15min :15min
-* [x] published to npm and get it to work - 15min :1h 7min
+* [x] better logging
+* [x] published to npm and get it to work
   * [x] requires in `bin`
-  * [x] update version and publish script :12min
-  * [x] + template files not copied over :30min - use "files" approach
-  * [x] + `${__dirname}/../templates/` wont' work on npm publish - not the case :25min
+  * [x] update version and publish script
+  * [x] + template files not copied over - use "files" approach
+  * [x] + `${__dirname}/../templates/` wont' work on npm publish - not the case
 * [ ] refactor
   * [ ] support private methods once eslint follows up
   * [ ] auto do an initial commit
