@@ -1,3 +1,11 @@
+import { babelWorksWithExports, PrivateClass } from './index'
+
 it('should jest works', () => {
-  expect(1 + 1).toEqual(2)
+  expect(babelWorksWithExports()).toEqual(true)
+})
+
+it('should support private class methods', () => {
+  const result = new PrivateClass(2).getDouble()
+
+  expect(result).toEqual(4)
 })

@@ -26,6 +26,8 @@
   * [x] + template files not copied over :30min - use "files" approach
   * [x] + `${__dirname}/../templates/` wont' work on npm publish - not the case :25min
 * [ ] refactor
+  * [ ] support private methods once eslint follows up
+  * [ ] auto do an initial commit
   * [ ] some npm init argument no longer makes sense
   * [ ] optimize, `find` will report an error when directory not found
   * [ ] use src to develop and bin to deploy
