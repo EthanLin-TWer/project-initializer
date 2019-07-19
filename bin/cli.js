@@ -97,6 +97,9 @@ shell.cp(`${templateDirectory}/.eslintrc`, '.')
 shell.cp(`${templateDirectory}/.travis.yml`, '.')
 shell.cp('-Rn', `${templateDirectory}/src/`, '.')
 
+log(info('Create README.md'))
+shell.exec(`echo '# ${projectName} README' > README.md`)
+
 log(info('Updating npm scripts ...'))
 let packageJson = jsonEditor('./package.json')
 packageJson.set('scripts', {
