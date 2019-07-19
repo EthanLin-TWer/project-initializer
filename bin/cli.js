@@ -7,8 +7,7 @@ const chalk = require('chalk')
 const jsonEditor = require('edit-json-file')
 
 const log = console.log
-const error = chalk.red
-const info = chalk.green
+const { error: red, green: info } = chalk
 
 const [, , ...args] = process.argv
 const [projectName] = args
@@ -22,7 +21,7 @@ if (!projectName) {
 if (shell.find(projectName).code === 0) {
   log(
     error(
-      `Directory ${projectName} already exist in current path, please choose another name.`
+      `Directory '${projectName}' already exist in current path, please choose another name.`
     )
   )
   shell.exit(1)
@@ -128,9 +127,7 @@ packageJson.set('husky', {
   },
 })
 packageJson.set('lint-staged', {
-  linters: {
-    'src/**/*.js': ['npm run lint -- --fix', 'git add'],
-  },
+  'src/**/*.js': ['npm run lint -- --fix', 'git add'],
 })
 packageJson.save()
 
