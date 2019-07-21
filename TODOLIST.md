@@ -43,4 +43,4 @@
 
 ## Future requirements
 
-* [ ] when provided with different project kinds arguments, generate skeletons based on different templates - e.g., react projects 
+* [ ] when provided with different project kinds arguments, generate skeletons based on different templates - e.g., react projects, markdown deck for session sharing 
