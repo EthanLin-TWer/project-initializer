@@ -12,7 +12,7 @@
   },
   "rules": {
     "prettier/prettier": "error",
-    "lines-between-class-members": "error",
+    "lines-between-class-members": "off",
     "no-empty": ["error", { "allowEmptyCatch": true }],
     "no-useless-escape": "off"
   }
