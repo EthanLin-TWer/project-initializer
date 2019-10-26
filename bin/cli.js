@@ -13,14 +13,14 @@ const [, , ...args] = process.argv
 const [projectName] = args
 
 if (!projectName) {
-  log(error('You should at least provide a project name'))
-  log(error('e.g.: pi my-awesome-project'))
+  log(red('You should at least provide a project name'))
+  log(red('e.g.: pi my-awesome-project'))
   shell.exit(1)
 }
 
 if (shell.find(projectName).code === 0) {
   log(
-    error(
+    red(
       `Directory '${projectName}' already exist in current path, please choose another name.`
     )
   )
@@ -28,7 +28,7 @@ if (shell.find(projectName).code === 0) {
 }
 
 if (!shell.which('npm')) {
-  log(error('You should have npm installed globally. Installation aborted.'))
+  log(red('You should have npm installed globally. Installation aborted.'))
   shell.exit(1)
 }
 
