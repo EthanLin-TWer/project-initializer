@@ -11,6 +11,7 @@
     "__DEV__": true
   },
   "rules": {
-    "prettier/prettier": "error"
+    "prettier/prettier": "error",
+    "lines-between-class-members": "off"
   }
 }
