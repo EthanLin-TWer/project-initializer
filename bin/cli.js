@@ -42,7 +42,7 @@ if (shell.which('git')) {
   shell.exec('git init')
   // .gitignore will got renamed to .npmignore by 'npm pack'
   // see the issue here: https://github.com/npm/npm/issues/7252
-  shell.exec(`echo -e "node_modules\n.idea" >> .gitignore`)
+  shell.exec(`echo "node_modules\n.idea" >> .gitignore`)
 }
 
 log(info('Initializing npm, creating package.json ...'))
