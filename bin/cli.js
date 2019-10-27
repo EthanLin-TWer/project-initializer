@@ -57,6 +57,7 @@ log(
       '@babel/core',
       '@babel/preset-env',
       '@babel/plugin-proposal-class-properties',
+      '@babel/plugin-proposal-decorators',
       'babel-eslint@next',
       'eslint',
       'eslint-config-prettier',
@@ -77,6 +78,7 @@ child_process.execFileSync(
     '@babel/core',
     '@babel/preset-env',
     '@babel/plugin-proposal-class-properties',
+    '@babel/plugin-proposal-decorators',
     'babel-eslint',
     'eslint',
     'eslint-config-javascript-the-good-parts',
@@ -123,7 +125,10 @@ packageJson.set('prettier', {
 })
 packageJson.set('babel', {
   presets: ['@babel/preset-env'],
-  plugins: ['@babel/plugin-proposal-class-properties'],
+  plugins: [
+    ['@babel/plugin-proposal-decorators', { legacy: true }],
+    ['@babel/plugin-proposal-class-properties', { loose: true }],
+  ],
 })
 packageJson.set('husky', {
   hooks: {
