@@ -132,7 +132,8 @@ packageJson.set('babel', {
 })
 packageJson.set('husky', {
   hooks: {
-    'pre-commit': 'lint-staged',
+    'pre-commit':
+      "lint-staged || echo 'lint failed but git commit still proceeding...'",
   },
 })
 packageJson.set('lint-staged', {
