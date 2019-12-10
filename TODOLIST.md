@@ -25,6 +25,7 @@
   * [x] update version and publish script
   * [x] + template files not copied over - use "files" approach
   * [x] + `${__dirname}/../templates/` wont' work on npm publish - not the case
+* [x] added typescript support
 * [ ] refactor
   * [ ] support private methods once eslint follows up
   * [ ] auto do an initial commit

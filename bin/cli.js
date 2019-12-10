@@ -65,6 +65,10 @@ log(
       'husky@next',
       'jest',
       'lint-staged',
+      'typescript',
+      'ts-jest',
+      '@types/node',
+      '@types/jest',
       'prettier',
     ],
     ' ...'
@@ -88,6 +92,10 @@ child_process.execFileSync(
     'jest',
     'lint-staged',
     'prettier',
+    'typescript',
+    'ts-jest',
+    '@types/node',
+    '@types/jest',
   ],
   {
     stdio: 'inherit',
@@ -97,6 +105,7 @@ child_process.execFileSync(
 log(info('Setting up .eslintrc, .travis.yml, src/ ...'))
 shell.cp(`${templateDirectory}/.eslintrc`, '.')
 shell.cp(`${templateDirectory}/.travis.yml`, '.')
+shell.cp(`${templateDirectory}/tsconfig.json`, '.')
 shell.cp('-Rn', `${templateDirectory}/src/`, '.')
 
 log(info('Create README.md'))
@@ -111,7 +120,11 @@ packageJson.set('scripts', {
   'test:ci': 'jest --coverage --verbose',
 })
 packageJson.set('jest', {
-  testMatch: ['<rootDir>/src/*.test.js'],
+  testMatch: ['<rootDir>/src/*.test.(js|ts)'],
+  transform: {
+    '.js': 'babel-jest',
+    '.ts$': 'ts-jest',
+  },
   verbose: false,
   collectCoverage: false,
 })
@@ -137,7 +150,7 @@ packageJson.set('husky', {
   },
 })
 packageJson.set('lint-staged', {
-  'src/**/*.js': ['npm run lint -- --fix', 'git add'],
+  'src/**/*.(js|ts)': ['npm run lint -- --fix', 'git add'],
 })
 packageJson.save()
 
