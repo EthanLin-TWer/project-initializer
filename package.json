@@ -2,9 +2,9 @@
   "name": "project-initializer",
   "version": "1.7.0",
   "description": "A command utility to different kinds of projects with different tech stacks.",
-  "main": "bin/cli.ts",
+  "main": "bin/cli.js",
   "bin": {
-    "pi": "./bin/cli.ts"
+    "pi": "./bin/cli.js"
   },
   "files": [
     "templates/",
