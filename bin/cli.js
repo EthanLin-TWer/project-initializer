@@ -70,6 +70,8 @@ log(
       '@types/node',
       '@types/jest',
       'prettier',
+      '@typescript-eslint/eslint-plugin',
+      '@typescript-eslint/parser',
     ],
     ' ...'
   )
@@ -96,6 +98,8 @@ child_process.execFileSync(
     'ts-jest',
     '@types/node',
     '@types/jest',
+    '@typescript-eslint/eslint-plugin',
+    '@typescript-eslint/parser',
   ],
   {
     stdio: 'inherit',
@@ -114,7 +118,7 @@ shell.exec(`echo '# ${projectName} README' > README.md`)
 log(info('Updating npm scripts ...'))
 let packageJson = jsonEditor('./package.json')
 packageJson.set('scripts', {
-  lint: 'eslint src',
+  lint: 'eslint src --ext .ts',
   test: 'jest',
   'test:watch': 'jest --watch',
   'test:ci': 'jest --coverage --verbose',
